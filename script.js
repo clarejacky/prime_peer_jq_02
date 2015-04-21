@@ -23,6 +23,7 @@ function makeProperty(){
 
 $(document).ready(function (){
 	$("#generate").on("click", function(){
+		$(this).fadeIn(100).fadeOut(100).fadeIn(100);
 		var property = makeProperty();
 		console.log(property, property.propId, property.sqFoot);
 
@@ -40,10 +41,23 @@ $(document).ready(function (){
 			$(this).remove();
 		});
 	});
-	/*$("#generate").mouseover(function (){
-		$("generate").css("background-color", "yellow");
+	$("#generate").on("mouseenter", function (){
+		$(this).css({"background-color": "yellow"});
 		
-	});*/
+	});
+	$("#generate").on("mouseleave", function (){
+		$(this).css({"background-color": "white"});
+		
+	});
+
+	$("#remove").on("mouseenter", function (){
+		$(this).css({"background-color": "yellow"});
+		
+	});
+	$("#remove").on("mouseleave", function (){
+		$(this).css({"background-color": "white"});
+		
+	});
 });
 
 /*	function thingFadeToggle(element){

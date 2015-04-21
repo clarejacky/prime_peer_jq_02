@@ -1,6 +1,6 @@
 body {
 	font-family: helvetica;
-	background-color: #3d5a34;
+	background-color: gray;
 }
 main {
 	margin: 20px auto 20px auto;
@@ -23,19 +23,32 @@ main {
 	display: table-cell;
 	background-color: yellow;
 	width: 150px;
+	height: 75px;
+	text-align: center;
 }
 #sqft {
 	display: table-cell;
 	background-color: yellow;
 	width: 150px;
+	height: 75px;
+	text-align: center;
 }
 #pricesqft {
 	display: table-cell;
 	background-color: yellow;
 	width: 150px;
+	height: 75px;
+	text-align: center;
 }
 #button {
 	display: table-cell;
 	background-color: yellow;
 	width: 150px;
+	height: 75px;
+}
+#remove {
+	height: 50px;
+	width: 100px;
+	border-radius: 10px;
+	margin: auto;
 }
