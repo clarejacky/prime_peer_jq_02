@@ -24,13 +24,32 @@ function makeProperty(){
 $(document).ready(function (){
 	$("#generate").on("click", function(){
 		var property = makeProperty();
+		console.log(property, property.propId, property.sqFoot);
 
-		$("#propTable").prepend('<tr id ="tableRow"><td>Property ID:  '+ property.propId + '</td><td>' 
-			+property.sqFoot+' Sq. Ft. </td>' + '<td>$' +property.costPerFoot+ '/sq.ft. </td><td><button id="remove">Remove</button></td></tr>');
+
+		var el = "<div><tr><td>Property ID: " + property.propId + "</td><td>" + property.sqFoot + " Sq. Ft. </td><td>$" + property.costPerFoot + "/sq.ft. </td><td><button class='remove'>Remove</button></td></tr></div>";
+
+		$("#propTable").append(el);
+		el = $("#propTable").children().last();
+		el.hide().slideDown();
 	});
-	$("#propTable").on("click", "#remove", function(){
-		$(this).parent().parent().remove();
+
+	$("#propTable").on("click", ".remove", function(){
+		$(this).parent().slideUp(function(){
+			$(this).remove();
+		});
 	});
 });
 
+/*	function thingFadeToggle(element){
+		element.fadeToggle("slow", function(){
+			thingFadeToggle(element);
+		});
+	}
 
+	$("#ourList").on("click", ".removeButton", function(){
+		thingFadeToggle($(this).parent());
+		});
+	});
+
+*/
