@@ -27,18 +27,23 @@ $(document).ready(function (){
 		console.log(property, property.propId, property.sqFoot);
 
 
-		var el = "<div><tr><td>Property ID: " + property.propId + "</td><td>" + property.sqFoot + " Sq. Ft. </td><td>$" + property.costPerFoot + "/sq.ft. </td><td><button class='remove'>Remove</button></td></tr></div>";
+		var el = "<div id='row'><div id='propertyId'>Property ID: " + property.propId + "</div><div id='sqft'>" + property.sqFoot + " Sq. Ft. </div><div id='pricesqft'>$" + property.costPerFoot + "/sq.ft.</div><div id='button'><button id='remove'>Remove</button></div></div>";
 
 		$("#propTable").append(el);
 		el = $("#propTable").children().last();
 		el.hide().slideDown();
+		$("#generate").prop('Click again');
 	});
 
-	$("#propTable").on("click", ".remove", function(){
+	$("#propTable").on("click", "#button", function(){
 		$(this).parent().slideUp(function(){
 			$(this).remove();
 		});
 	});
+	/*$("#generate").mouseover(function (){
+		$("generate").css("background-color", "yellow");
+		
+	});*/
 });
 
 /*	function thingFadeToggle(element){
