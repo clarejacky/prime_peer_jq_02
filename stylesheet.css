@@ -21,34 +21,43 @@ main {
 }
 #propertyId {
 	display: table-cell;
-	background-color: yellow;
+	background-color: #E6E6FA;
 	width: 150px;
-	height: 75px;
+	height: 50px;
 	text-align: center;
+	border: 1px solid black;
+	padding-top: 20px;
 }
 #sqft {
 	display: table-cell;
-	background-color: yellow;
+	background-color: #E6E6FA;
 	width: 150px;
-	height: 75px;
+	height: 50px;
 	text-align: center;
+	border: 1px solid black;
 }
 #pricesqft {
 	display: table-cell;
-	background-color: yellow;
+	background-color: #E6E6FA;
 	width: 150px;
-	height: 75px;
+	height: 50px;
 	text-align: center;
+	border: 1px solid black;
 }
 #button {
 	display: table-cell;
 	background-color: yellow;
 	width: 150px;
-	height: 75px;
+	height: 50px;
+	border: 1px solid black;
+	margin: auto;
 }
 #remove {
 	height: 50px;
 	width: 100px;
 	border-radius: 10px;
-	margin: auto;
+	position: absolute;
+	margin-left: 20px;
+	margin-top: 10px;
+	background-color: #E6E6FA
 }
