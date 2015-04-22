@@ -33,7 +33,6 @@ $(document).ready(function (){
 		$("#propTable").append(el);
 		el = $("#propTable").children().last();
 		el.hide().slideDown();
-		$("#generate").prop('Click again');
 	});
 
 	$("#propTable").on("click", "#button", function(){
@@ -43,10 +42,14 @@ $(document).ready(function (){
 	});
 	$("#generate").on("mouseenter", function (){
 		$(this).css({"background-color": "yellow"});
+		$(this).css({"width": "300px"});
+		$(this).text("Click Here");
 		
 	});
 	$("#generate").on("mouseleave", function (){
 		$(this).css({"background-color": "white"});
+		$(this).css({"width": "200px"});
+		$(this).text("Generate Property");
 		
 	});
 
