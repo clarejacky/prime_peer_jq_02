@@ -50,14 +50,6 @@ $(document).ready(function (){
 		
 	});
 
-	$("#remove").on("mouseenter", function (){
-		$(this).css({"background-color": "yellow"});
-		
-	});
-	$("#remove").on("mouseleave", function (){
-		$(this).css({"background-color": "white"});
-		
-	});
 });
 
 /*	function thingFadeToggle(element){
